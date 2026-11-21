@@ -1,0 +1,642 @@
+  
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Portafolio profesional de Jonathan Rengifo Orozco, Administrador Tecnológico.">
+
+    <title>Jonathan Rengifo Orozco | Portafolio Profesional</title>
+
+    <!-- Biblioteca para generar archivos PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #e8f5ee;
+            color: #263445;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #064e3b;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h2 {
+            color: #50e3a4;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #50e3a4;
+        }
+
+        .hero {
+            min-height: 430px;
+            background: linear-gradient(120deg, #064e3b, #059669);
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 70px 10%;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #6ee7b7;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: #ecfdf5;
+            margin-bottom: 25px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: rgba(110,231,183,0.15);
+            border: 1px solid #6ee7b7;
+            color: #a7f3d0;
+            padding: 7px 15px;
+            border-radius: 20px;
+            margin-bottom: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #6ee7b7;
+            color: #064e3b;
+            padding: 12px 23px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 14px;
+        }
+
+        .btn:hover {
+            background: white;
+        }
+
+        .btn-pdf {
+            background: white;
+            color: #047857;
+            border: 2px solid #6ee7b7;
+        }
+
+        section {
+            padding: 65px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #064e3b;
+            font-size: 30px;
+            margin-bottom: 35px;
+        }
+
+        .about {
+            background: #f0fdf4;
+        }
+
+        .about-content {
+            max-width: 950px;
+            margin: auto;
+            text-align: justify;
+            font-size: 17px;
+            color: #536273;
+        }
+
+        .about-content p {
+            margin-bottom: 18px;
+        }
+
+        .highlight {
+            color: #047857;
+            font-weight: bold;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 27px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            border-top: 4px solid #10b981;
+        }
+
+        .card h3 {
+            color: #047857;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #647386;
+            margin-bottom: 8px;
+        }
+
+        .experience {
+            background: #f0fdf4;
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: auto;
+            border-left: 3px solid #10b981;
+            padding-left: 25px;
+        }
+
+        .timeline-item {
+            margin-bottom: 28px;
+        }
+
+        .timeline-item h3 {
+            color: #047857;
+        }
+
+        .timeline-item ul {
+            padding-left: 22px;
+            color: #647386;
+            margin-top: 10px;
+        }
+
+        .contact {
+            background: #064e3b;
+            color: white;
+        }
+
+        .contact .section-title {
+            color: #a7f3d0;
+        }
+
+        .contact-info {
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .contact-info p {
+            padding: 12px;
+            border-bottom: 1px solid #26745b;
+        }
+
+        .contact-info strong {
+            color: #6ee7b7;
+        }
+
+        footer {
+            background: #022c22;
+            color: #d1fae5;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        /* Estilos especiales para la generación del PDF */
+        .pdf-generating {
+            width: 100%;
+            background: white;
+        }
+
+        @media(max-width: 700px) {
+            header {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+
+            .hero {
+                padding: 55px 7%;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            section {
+                padding: 50px 7%;
+            }
+        }
+
+        @media print {
+            header nav, .btn, footer {
+                display: none !important;
+            }
+
+            .hero, .contact {
+                background: white !important;
+                color: black !important;
+            }
+
+            .hero p, .contact-info p {
+                color: black !important;
+            }
+
+            section {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CONTENIDO DEL PORTAFOLIO -->
+    <div id="portafolio">
+
+        <!-- ENCABEZADO -->
+        <header>
+
+            <h2>Jonathan Rengifo</h2>
+
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#perfil">Perfil</a>
+                <a href="#experiencia">Experiencia</a>
+                <a href="#formacion">Formación</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+
+        </header>
+
+        <!-- PRESENTACIÓN -->
+        <section class="hero" id="inicio">
+
+            <div class="hero-content">
+
+                <span class="tag">PORTAFOLIO PROFESIONAL</span>
+
+                <h1>
+                    Hola, soy
+                    <span>Jonathan Rengifo Orozco</span>
+                </h1>
+
+                <p>
+                    Administrador Tecnológico | Analista de Producción |
+                    Gestión de Procesos de Manufactura
+                </p>
+
+                <p>
+                    Estudiante de sexto semestre de Administración
+                    Tecnológica en el Instituto Tecnológico Metropolitano (ITM).
+                </p>
+
+                <a href="#contacto" class="btn">
+                    Contactarme
+                </a>
+
+                <button class="btn btn-pdf"
+                        onclick="descargarPDF()">
+                    ↓ Descargar portafolio PDF
+                </button>
+
+                <button class="btn"
+                        onclick="window.print()">
+                    Imprimir portafolio
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- PERFIL PROFESIONAL -->
+        <section class="about" id="perfil">
+
+            <h2 class="section-title">
+                Perfil Profesional
+            </h2>
+
+            <div class="about-content">
+
+                <p>
+                    Soy <span class="highlight">Jonathan Rengifo Orozco</span>,
+                    estudiante de sexto semestre de Administración Tecnológica
+                    en el Instituto Tecnológico Metropolitano (ITM), con
+                    experiencia en análisis y seguimiento de procesos
+                    productivos en empresas del sector manufacturero.
+                </p>
+
+                <p>
+                    Soy un ciudadano global que cuenta con formación integral,
+                    con cualidades éticas y de autonomía para su desarrollo
+                    profesional, con capacidad para planear, organizar,
+                    dirigir, controlar y evaluar los procesos de gestión
+                    del conocimiento, tecnología e innovación, alineándolos
+                    con la estrategia para el logro de los objetivos de las
+                    organizaciones en las que interviene, lo cual le permite
+                    tomar decisiones en contextos complejos, dinámicos e inciertos.
+                </p>
+
+                <p>
+                    Mi perfil está orientado a la administración de procesos,
+                    el análisis de producción, la gestión organizacional y
+                    la integración de herramientas tecnológicas para
+                    contribuir al mejoramiento continuo y la eficiencia
+                    de las organizaciones.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ÁREAS DE EXPERIENCIA -->
+        <section>
+
+            <h2 class="section-title">
+                Áreas de Experiencia
+            </h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Gestión de Producción</h3>
+                    <p>
+                        Seguimiento y análisis de procesos productivos
+                        en empresas de manufactura.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Sector Manufacturero</h3>
+                    <p>
+                        Experiencia relacionada con procesos de
+                        confección y sector energético.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Administración Tecnológica</h3>
+                    <p>
+                        Formación orientada a integrar la administración,
+                        la tecnología y los procesos organizacionales.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- EXPERIENCIA PROFESIONAL -->
+        <section class="experience" id="experiencia">
+
+            <h2 class="section-title">
+                Experiencia Profesional
+            </h2>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <h3>Analista de Producción</h3>
+
+                    <p>
+                        <strong>Sector:</strong> Manufactura
+                    </p>
+
+                    <p>
+                        Experiencia en análisis y seguimiento de procesos
+                        de producción en empresas manufactureras,
+                        incluyendo los sectores de confección y energético.
+                    </p>
+
+                    <br>
+
+                    <p><strong>Áreas relacionadas:</strong></p>
+
+                    <ul>
+                        <li>Análisis de procesos productivos.</li>
+                        <li>Seguimiento de operaciones de manufactura.</li>
+                        <li>Control y seguimiento de producción.</li>
+                        <li>Apoyo a la gestión de procesos organizacionales.</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- FORMACIÓN ACADÉMICA -->
+        <section id="formacion">
+
+            <h2 class="section-title">
+                Formación Académica
+            </h2>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <h3>Administración Tecnológica</h3>
+
+                    <p>
+                        <strong>Institución:</strong>
+                        Instituto Tecnológico Metropolitano (ITM)
+                    </p>
+
+                    <p>
+                        <strong>Semestre:</strong> Sexto semestre
+                    </p>
+
+                    <p>
+                        Formación en administración, gestión empresarial,
+                        tecnología e innovación organizacional.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- INFORMACIÓN PERSONAL -->
+        <section class="about">
+
+            <h2 class="section-title">
+                Información Personal
+            </h2>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <h3>Datos personales</h3>
+
+                    <p>
+                        <strong>Nombre:</strong>
+                        Jonathan Rengifo Orozco
+                    </p>
+
+                    <p>
+                        <strong>Edad:</strong> 42 años
+                    </p>
+
+                    <p>
+                        <strong>Documento:</strong> 8102666
+                    </p>
+
+                    <p>
+                        <strong>Perfil:</strong> Administrador Tecnológico
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="contact" id="contacto">
+
+            <h2 class="section-title">
+                Contacto
+            </h2>
+
+            <div class="contact-info">
+
+                <p>
+                    <strong>Nombre:</strong>
+                    Jonathan Rengifo Orozco
+                </p>
+
+                <p>
+                    <strong>Correo electrónico:</strong>
+
+                    <a href="mailto:jonathanrengifo@gmail.com"
+                       style="color:white;">
+                        jonathanrengifo@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    <strong>Dirección:</strong>
+                    Calle 8A # 55-32
+                </p>
+
+                <p>
+                    <strong>Profesión:</strong>
+                    Administrador Tecnológico
+                </p>
+
+                <p>
+                    <strong>Institución:</strong>
+                    Instituto Tecnológico Metropolitano (ITM)
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- PIE DE PÁGINA -->
+        <footer>
+
+            <p>
+                © 2026 Jonathan Rengifo Orozco.
+                Portafolio Profesional.
+            </p>
+
+            <p>
+                Administración Tecnológica | Gestión | Innovación
+            </p>
+
+        </footer>
+
+    </div>
+
+    <!-- FUNCIÓN PARA DESCARGAR EL PORTAFOLIO EN PDF -->
+    <script>
+
+        function descargarPDF() {
+
+            const elemento = document.getElementById('portafolio');
+
+            const opciones = {
+                margin: [8, 8, 8, 8],
+
+                filename: 'Portafolio_Jonathan_Rengifo_Orozco.pdf',
+
+                image: {
+                    type: 'jpeg',
+                    quality: 0.98
+                },
+
+                html2canvas: {
+                    scale: 2,
+                    useCORS: true,
+                    backgroundColor: '#ffffff',
+                    scrollY: 0
+                },
+
+                jsPDF: {
+                    unit: 'mm',
+                    format: 'a4',
+                    orientation: 'portrait'
+                },
+
+                pagebreak: {
+                    mode: ['css', 'legacy']
+                }
+            };
+
+            if (typeof html2pdf === 'undefined') {
+                alert('No se pudo cargar el generador PDF. Verifica tu conexión a Internet e inténtalo nuevamente.');
+                return;
+            }
+
+            html2pdf()
+                .set(opciones)
+                .from(elemento)
+                .save();
+
+        }
+
+    </script>
+
+</body>
+</html>
+
