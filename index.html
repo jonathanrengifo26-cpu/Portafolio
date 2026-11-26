@@ -8,12 +8,12 @@
 <title>Jonathan Rengifo Orozco | Portafolio Profesional</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <style>
-:root{--navy:#142b3b;--blue:#28566b;--gold:#c7a66a;--ink:#263746;--muted:#607080;--paper:#fff;--bg:#edf1f4;--line:#dce3e8}
+:root{--navy:#142b3b;--blue:#28566b;--gold:#c7a66a;--ink:#263746;--muted:#607080;--bg:#edf1f4;--line:#dce3e8}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:Inter,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
 a{color:inherit}
-.site-header{background:var(--navy);color:#fff;padding:16px max(6%,calc((100% - 1160px)/2));display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.site-header{background:var(--navy);color:#fff;padding:16px 6%;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
 .brand{font-size:18px;font-weight:750;letter-spacing:.2px;color:#fff}
 .brand span{color:var(--gold)}
 nav{display:flex;gap:18px;flex-wrap:wrap}
@@ -64,230 +64,315 @@ nav a:hover{color:var(--gold)}
 footer{background:#0d202d;color:#c8d3db;text-align:center;padding:22px;font-size:13px}
 footer p+p{margin-top:4px;color:#9eafb9}
 @media(max-width:720px){
- .site-header{justify-content:center;text-align:center}
- nav{justify-content:center;gap:12px}
- .hero{padding:42px 7%}
- .hero-inner{grid-template-columns:1fr;justify-items:center;text-align:center;gap:25px}
- .photo{width:190px;height:230px;grid-row:1}
- .hero-copy{margin-left:auto;margin-right:auto}
- .section{padding:42px 6%}
- .toolbar{justify-content:center}
+.site-header{justify-content:center;text-align:center}
+nav{justify-content:center;gap:12px}
+.hero{padding:42px 7%}
+.hero-inner{grid-template-columns:1fr;justify-items:center;text-align:center;gap:25px}
+.photo{width:190px;height:230px;grid-row:1}
+.hero-copy{margin-left:auto;margin-right:auto}
+.section{padding:42px 6%}
+.toolbar{justify-content:center}
 }
 @media print{
- @page{size:A4;margin:12mm}
- body{background:#fff!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
- #portfolio{max-width:none;margin:0;box-shadow:none}
- .site-header,.toolbar,.no-pdf,nav{display:none!important}
- .hero{padding:35px 6%}
- .hero-inner{grid-template-columns:1fr 190px;gap:25px}
- .photo{width:175px;height:215px}
- .section{padding:30px 6%}
- .section-title{font-size:21px;margin-bottom:18px}
- .grid{grid-template-columns:repeat(2,1fr);gap:10px}
- .card{padding:14px;box-shadow:none}
- .card h3{font-size:15px}
- .card p,.card li,.timeline ul,.project p{font-size:11px}
- .project{padding:16px}
- a{text-decoration:none}
+@page{size:A4;margin:12mm}
+body{background:#fff!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+#portfolio{max-width:none;margin:0;box-shadow:none}
+.site-header,.toolbar,.no-pdf,nav{display:none!important}
+.hero{padding:35px 6%}
+.hero-inner{grid-template-columns:1fr 190px;gap:25px}
+.photo{width:175px;height:215px}
+.section{padding:30px 6%}
+.section-title{font-size:21px;margin-bottom:18px}
+.grid{grid-template-columns:repeat(2,1fr);gap:10px}
+.card{padding:14px;box-shadow:none}
+.card h3{font-size:15px}
+.card p,.card li,.timeline ul,.project p{font-size:11px}
+.project{padding:16px}
+a{text-decoration:none}
 }
 .pdf-generating .no-pdf{display:none!important}
 </style>
 </head>
 <body>
-
 <header class="site-header no-pdf">
-  <div class="brand">JONATHAN <span>RENGIFO OROZCO</span></div>
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#acerca">Perfil</a>
-    <a href="#experiencia">Experiencia</a>
-    <a href="#formacion">Formación</a>
-    <a href="#sap">SAP</a>
-    <a href="#proyectos">Proyecto</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+<div class="brand">JONATHAN <span>RENGIFO OROZCO</span></div>
+<nav>
+<a href="#inicio">Inicio</a><a href="#acerca">Perfil</a><a href="#experiencia">Experiencia</a>
+<a href="#formacion">Formación</a><a href="#sap">SAP</a><a href="#proyectos">Proyecto</a><a href="#contacto">Contacto</a>
+</nav>
 </header>
-
 <div class="toolbar no-pdf">
-  <button class="pdf-btn" onclick="descargarPDF()">↓ Descargar portafolio en PDF</button>
+<button class="pdf-btn" onclick="descargarPDF()">↓ Descargar portafolio en PDF</button>
 </div>
-
 <main id="portfolio">
-
 <section class="hero" id="inicio">
- <div class="hero-inner">
-  <div>
-   <span class="eyebrow">PORTAFOLIO PROFESIONAL</span>
-   <h1>Jonathan<br><span>Rengifo Orozco</span></h1>
-   <div class="role">Gestión Tecnológica · Gestión Administrativa</div>
-   <p class="hero-copy">
-    Tecnólogo en Gestión Administrativa y estudiante de Gestión Tecnológica en el ITM. Experiencia en producción, manufactura, logística, gestión de materiales y sistemas ERP.
-   </p>
-   <div class="hero-actions no-pdf">
-    <a class="primary-btn" href="#contacto">Hablemos de oportunidades</a>
-   </div>
-  </div>
-
-  <div class="photo">
-   <img alt="Fotografía profesional de Jonathan Rengifo Orozco"
-   src="data:image/jpeg;base64,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B4R4zUCI6E/70lQRt2XskSEQYyitCkUGRUyJRuXuNOMLs2+imbf2h0TJSSRluLwHA2NkBuV/0xVPJh1Z/wBL1FK3GMthtjaImi9UCJLI/ohS6bUicOH+db6rXDpvVMZaV4Y264ZDWgT+DKCeSRCxqSEcdRqaZZX8MQ80JzjpoSW4HgY9jkps31pkcElO4zgXMbSAcx72WRPkjt12jyiXNboT4vjoNxkSz2ISkYSnXuEsxmIArkJR5N96JNDUPzp9D11JyYQ6REwxq1ftBfRGTK68OBKN/isx4G4UsxyP6I8f4FYS+jO/zlsi3J4CDBKrjgmhwIVHP+iYx3gYaE7oK60+NxZyg2WINUn9J+zNqGuD/G5VuFo8jC2/wr17rgTCvt8iT5ISIJoTdo8oeUJPJZ7fDEx5U5QhBXLgay/OMdiBUHMTKUnAU3yn13pMmWvRA8t6Nw1onb6yAFPyMLhCRUfQIsy8aKdbqvY007KjiD8xv2WeoViCLex1Iqf9HyK+ts0cDEIbJe3psxp6hIFvvccCCgNaBcGUcGM2m4xQaFGJekWGpyMbJ7hdDA2+GWjmyjTGvWMmTXTZOfZYKBK0wGj2F3ENDwQqFxEmJAh6otkCD+rboydC+AtFkRKh0x6KundTYURqtD0dMb4BI0rVK03III6MhfIsqexaFjR4dZLI0Qbg8Ub6MXwbixo8kaF0FkKvgedTZsLKbabH1l8CQTnTAQyBoS66Sa0Q6XwZyWJI6lKwtV1WhKhLU06sXXWSAUtEhC00Dg8KRqcFR7OvJNCbgm4jRUnQvC/xMVmjwkfYWhaEuTloY2fKFlD3XD+U9PD1QLGrkU76rSNGrIRHlkPnSDkkGxUpGV4OAbl/Ic9NVstDGrH+I8Gfw/49CeOkXTdhySTdDFJgZiFnV//aAAwDAQACAAMAAAAQ8888888888888888888888888888888888888888w888888888888888888888880oKWUw88888888888888888888wO6ssuWs888888888888888888smtYiWu74U88888888888888888g9iwPp6MBs888888888888888884iP/cHfJWU88888888888888888HsRmhNubMW8888888888888888/0p6JpCAIfaY888888888888888SJxvUhMspshD888888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">
-  </div>
- </div>
+<div class="hero-inner">
+<div>
+<span class="eyebrow">PORTAFOLIO PROFESIONAL</span>
+<h1>Jonathan<br><span>Rengifo Orozco</span></h1>
+<div class="role">Gestión Tecnológica · Gestión Administrativa</div>
+<p class="hero-copy">Tecnólogo en Gestión Administrativa y estudiante de Gestión Tecnológica en el ITM. Experiencia en producción, manufactura, logística, gestión de materiales y sistemas ERP.</p>
+<div class="hero-actions no-pdf"><a class="primary-btn" href="#contacto">Hablemos de oportunidades</a></div>
+</div>
+<div class="photo"><img alt="Fotografía profesional de Jonathan Rengifo Orozco" loading="eager" decoding="sync" src="data:image/webp;base64,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"></div>
+</div>
 </section>
 
+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"></div>
+</div>
+</section>
 <section class="section" id="acerca">
- <h2 class="section-title">Acerca de mí</h2>
- <div class="lead">
-  <p>Actualmente estudio Gestión Tecnológica en el Instituto Tecnológico Metropolitano (ITM) y soy graduado en Gestión Administrativa. Cuento con experiencia en procesos administrativos y operativos, especialmente en seguimiento de producción, gestión de materiales y manejo de sistemas ERP.</p>
-  <p>Me caracterizo por la responsabilidad, el compromiso y la orientación al logro. Entre mis fortalezas destaco la organización, el trabajo en equipo, la capacidad de adaptación y la disposición para encontrar soluciones a los desafíos cotidianos.</p>
-  <p>Disfruto compartir tiempo con mi familia, ver fútbol, salir a caminar y aprender herramientas que contribuyan a mi desarrollo personal y profesional.</p>
- </div>
+<h2 class="section-title">Acerca de mí</h2>
+<div class="lead">
+<p>Actualmente estudio Gestión Tecnológica en el Instituto Tecnológico Metropolitano (ITM) y soy graduado en Gestión Administrativa. Cuento con experiencia en procesos administrativos y operativos, especialmente en seguimiento de producción, gestión de materiales y manejo de sistemas ERP.</p>
+<p>Me caracterizo por la responsabilidad, el compromiso y la orientación al logro. Entre mis fortalezas destaco la organización, el trabajo en equipo, la capacidad de adaptación y la disposición para encontrar soluciones a los desafíos cotidianos.</p>
+<p>Disfruto compartir tiempo con mi familia, ver fútbol, salir a caminar y aprender herramientas que contribuyan a mi desarrollo personal y profesional.</p>
+</div>
 </section>
-
 <section class="section alt">
- <h2 class="section-title">Áreas de experiencia</h2>
- <div class="grid">
-  <article class="card"><div class="kicker">Operaciones</div><h3>Gestión de producción</h3><p>Seguimiento, control de procesos y coordinación de operaciones manufactureras.</p></article>
-  <article class="card"><div class="kicker">Abastecimiento</div><h3>Gestión de materiales</h3><p>Control de inventarios, recepción de mercancías, traslados y gestión de pedidos.</p></article>
-  <article class="card"><div class="kicker">Tecnología</div><h3>Sistemas ERP - SAP</h3><p>Experiencia y capacitación en los módulos PP (Planificación de Producción) y MM (Gestión de Materiales).</p></article>
-  <article class="card"><div class="kicker">Cadena productiva</div><h3>Logística y manufactura</h3><p>Coordinación de operaciones externas, proveedores, talleres y procesos de maquila.</p></article>
- </div>
+<h2 class="section-title">Áreas de experiencia</h2>
+<div class="grid">
+<article class="card"><div class="kicker">Operaciones</div><h3>Gestión de producción</h3><p>Seguimiento, control de procesos y coordinación de operaciones manufactureras.</p></article>
+<article class="card"><div class="kicker">Abastecimiento</div><h3>Gestión de materiales</h3><p>Control de inventarios, recepción de mercancías, traslados y gestión de pedidos.</p></article>
+<article class="card"><div class="kicker">Tecnología</div><h3>Sistemas ERP - SAP</h3><p>Experiencia y capacitación en los módulos PP (Planificación de Producción) y MM (Gestión de Materiales).</p></article>
+<article class="card"><div class="kicker">Cadena productiva</div><h3>Logística y manufactura</h3><p>Coordinación de operaciones externas, proveedores, talleres y procesos de maquila.</p></article>
+</div>
 </section>
-
 <section class="section" id="experiencia">
- <h2 class="section-title">Experiencia profesional</h2>
- <div class="lead" style="margin-bottom:25px">
-  <p>Más de 20 años de experiencia en los sectores de confección, manufactura y logística, con participación en procesos de producción, maquila, gestión de proveedores, control de inventarios y coordinación de operaciones externas.</p>
-  <p>Experiencia en mejoras operativas, acompañamiento a procesos de transformación tecnológica y optimización de cadenas productivas orientadas al cumplimiento de objetivos organizacionales.</p>
- </div>
- <div class="timeline">
-  <h3>Analista de Producción</h3>
-  <p><strong>Sectores:</strong> Confección, manufactura y logística.</p>
-  <ul>
-   <li>Seguimiento y control de producción.</li>
-   <li>Gestión de materiales e inventarios.</li>
-   <li>Coordinación de proveedores y talleres externos.</li>
-   <li>Control de procesos de maquila.</li>
-   <li>Optimización de operaciones productivas.</li>
-   <li>Apoyo a procesos de transformación tecnológica.</li>
-  </ul>
- </div>
+<h2 class="section-title">Experiencia profesional</h2>
+<div class="lead" style="margin-bottom:25px">
+<p>Más de 20 años de experiencia en los sectores de confección, manufactura y logística, con participación en procesos de producción, maquila, gestión de proveedores, control de inventarios y coordinación de operaciones externas.</p>
+<p>Experiencia en mejoras operativas, acompañamiento a procesos de transformación tecnológica y optimización de cadenas productivas orientadas al cumplimiento de objetivos organizacionales.</p>
+</div>
+<div class="timeline">
+<h3>Analista de Producción</h3>
+<p><strong>Sectores:</strong> Confección, manufactura y logística.</p>
+<ul>
+<li>Seguimiento y control de producción.</li>
+<li>Gestión de materiales e inventarios.</li>
+<li>Coordinación de proveedores y talleres externos.</li>
+<li>Control de procesos de maquila.</li>
+<li>Optimización de operaciones productivas.</li>
+<li>Apoyo a procesos de transformación tecnológica.</li>
+</ul>
+</div>
 </section>
-
 <section class="section alt" id="formacion">
- <h2 class="section-title">Formación académica</h2>
- <div class="grid">
-  <article class="card"><div class="kicker">2025 - Actualidad</div><h3>Gestión Tecnológica</h3><p>Instituto Tecnológico Metropolitano (ITM). Estudios profesionales en curso.</p></article>
-  <article class="card"><div class="kicker">2015 - 2024</div><h3>Tecnología en Gestión Administrativa</h3><p>Instituto Tecnológico Metropolitano (ITM).</p></article>
-  <article class="card"><div class="kicker">2014</div><h3>Técnico en Asistencia Administrativa</h3><p>Servicio Nacional de Aprendizaje (SENA).</p></article>
- </div>
+<h2 class="section-title">Formación académica</h2>
+<div class="grid">
+<article class="card"><div class="kicker">2025 - Actualidad</div><h3>Gestión Tecnológica</h3><p>Instituto Tecnológico Metropolitano (ITM). Estudios profesionales en curso.</p></article>
+<article class="card"><div class="kicker">2015 - 2024</div><h3>Tecnología en Gestión Administrativa</h3><p>Instituto Tecnológico Metropolitano (ITM).</p></article>
+<article class="card"><div class="kicker">2014</div><h3>Técnico en Asistencia Administrativa</h3><p>Servicio Nacional de Aprendizaje (SENA).</p></article>
+</div>
 </section>
-
 <section class="section" id="certificados">
- <h2 class="section-title">Certificados y cursos</h2>
- <div class="grid">
-  <article class="card"><h3>Administración de la Relación con los Clientes</h3><p>Curso realizado en el SENA.</p></article>
-  <article class="card"><h3>Herramientas Avanzadas de Hoja de Cálculo</h3><p>Curso realizado en el SENA.</p></article>
-  <article class="card"><h3>Pensamiento Empresarial - Módulo I</h3><p>Mentalidad Empresarial · SENA.</p></article>
-  <article class="card"><h3>Pensamiento Empresarial - Módulo II</h3><p>Planeando la Empresa · SENA.</p></article>
-  <article class="card"><h3>Pensamiento Empresarial - Módulo III</h3><p>Empresa y Gestión · SENA.</p></article>
-  <article class="card"><h3>Contabilidad en las Organizaciones</h3><p>Curso realizado en el SENA.</p></article>
- </div>
+<h2 class="section-title">Certificados y cursos</h2>
+<div class="grid">
+<article class="card"><h3>Administración de la Relación con los Clientes</h3><p>Curso realizado en el SENA.</p></article>
+<article class="card"><h3>Herramientas Avanzadas de Hoja de Cálculo</h3><p>Curso realizado en el SENA.</p></article>
+<article class="card"><h3>Pensamiento Empresarial - Módulo I</h3><p>Mentalidad Empresarial · SENA.</p></article>
+<article class="card"><h3>Pensamiento Empresarial - Módulo II</h3><p>Planeando la Empresa · SENA.</p></article>
+<article class="card"><h3>Pensamiento Empresarial - Módulo III</h3><p>Empresa y Gestión · SENA.</p></article>
+<article class="card"><h3>Contabilidad en las Organizaciones</h3><p>Curso realizado en el SENA.</p></article>
+</div>
 </section>
-
 <section class="section alt" id="sap">
- <h2 class="section-title">Capacitaciones en sistema SAP</h2>
- <div class="grid">
-  <article class="card"><h3>SAP PP · Production Planning</h3><p>Capacitación en el módulo de planificación de producción, con enfoque en procesos de manufactura.</p></article>
-  <article class="card"><h3>SAP MM · Materials Management</h3><p>Capacitación en compra de servicios, registro de información, gestión de pedidos de compra, recepción de mercancía y traslados en dos pasos.</p></article>
- </div>
+<h2 class="section-title">Capacitaciones en sistema SAP</h2>
+<div class="grid">
+<article class="card"><h3>SAP PP · Production Planning</h3><p>Capacitación en el módulo de planificación de producción, con enfoque en procesos de manufactura.</p></article>
+<article class="card"><h3>SAP MM · Materials Management</h3><p>Capacitación en compra de servicios, registro de información, gestión de pedidos de compra, recepción de mercancía y traslados en dos pasos.</p></article>
+</div>
 </section>
-
 <section class="section" id="proyectos">
- <h2 class="section-title">Proyecto destacado</h2>
- <div class="project">
-  <div class="kicker">Transformación operativa y tecnológica</div>
-  <h3>Transición tecnológica SAP y fortalecimiento del proyecto de maquila - Marketing Personal</h3>
-  <p>Ingresé a Marketing Personal durante un periodo de transformación operativa y participé en el proceso de transición al sistema SAP. Contribuí en la adaptación de procesos, el seguimiento de la operación y el acompañamiento a los equipos involucrados.</p>
-  <p>Adicionalmente, apoyé la consolidación y el crecimiento del proyecto de maquila, fortaleciendo el control de la producción, la coordinación con talleres externos y el cumplimiento de los objetivos operativos.</p>
- </div>
+<h2 class="section-title">Proyecto destacado</h2>
+<div class="project">
+<div class="kicker">Transformación operativa y tecnológica</div>
+<h3>Transición tecnológica SAP y fortalecimiento del proyecto de maquila - Marketing Personal</h3>
+<p>Ingresé a Marketing Personal durante un periodo de transformación operativa y participé en el proceso de transición al sistema SAP. Contribuí en la adaptación de procesos, el seguimiento de la operación y el acompañamiento a los equipos involucrados.</p>
+<p>Adicionalmente, apoyé la consolidación y el crecimiento del proyecto de maquila, fortaleciendo el control de la producción, la coordinación con talleres externos y el cumplimiento de los objetivos operativos.</p>
+</div>
 </section>
-
 <section class="section alt">
- <h2 class="section-title">Conéctate conmigo</h2>
- <div class="social">
-  <a href="https://www.linkedin.com/in/jonathan-rengifo-orozco-12177088/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-  <a href="https://www.instagram.com/jrengifoo/" target="_blank" rel="noopener noreferrer">Instagram</a>
-  <a href="https://www.facebook.com/jonathan.rengifoorozco?locale=es_LA" target="_blank" rel="noopener noreferrer">Facebook</a>
- </div>
+<h2 class="section-title">Conéctate conmigo</h2>
+<div class="social">
+<a href="https://www.linkedin.com/in/jonathan-rengifo-orozco-12177088/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<a href="https://www.instagram.com/jrengifoo/" target="_blank" rel="noopener noreferrer">Instagram</a>
+<a href="https://www.facebook.com/jonathan.rengifoorozco?locale=es_LA" target="_blank" rel="noopener noreferrer">Facebook</a>
+</div>
 </section>
-
 <section class="section contact" id="contacto">
- <h2 class="section-title">Contacto</h2>
- <p><strong>Nombre:</strong> Jonathan Rengifo Orozco</p>
- <p><strong>Correo electrónico:</strong> <a href="mailto:jonathanrengifo.26@gmail.com">jonathanrengifo.26@gmail.com</a></p>
- <p><strong>Institución:</strong> Instituto Tecnológico Metropolitano (ITM)</p>
- <p><strong>Perfil:</strong> Gestión Tecnológica y Administrativa</p>
- <p class="no-pdf" style="margin-top:18px">
-  <a class="primary-btn" href="mailto:jonathanrengifo.26@gmail.com">Enviar un correo</a>
- </p>
+<h2 class="section-title">Contacto</h2>
+<p><strong>Nombre:</strong> Jonathan Rengifo Orozco</p>
+<p><strong>Correo electrónico:</strong> <a href="mailto:jonathan.rengifo.26@gmail.com">jonathan.rengifo.26@gmail.com</a></p>
+<p><strong>Institución:</strong> Instituto Tecnológico Metropolitano (ITM)</p>
+<p><strong>Perfil:</strong> Gestión Tecnológica y Administrativa</p>
+<p class="no-pdf" style="margin-top:18px"><a class="primary-btn" href="mailto:jonathan.rengifo.26@gmail.com">Enviar un correo</a></p>
 </section>
-
 <footer>
- <p>© 2026 Jonathan Rengifo Orozco · Portafolio Profesional</p>
- <p>Gestión Tecnológica · Administración · Producción · Innovación · Manufactura</p>
+<p>© 2026 Jonathan Rengifo Orozco · Portafolio Profesional</p>
+<p>Gestión Tecnológica · Administración · Producción · Innovación · Manufactura</p>
 </footer>
-
 </main>
-
 <script>
 async function descargarPDF(){
- const elemento=document.getElementById('portfolio');
- const boton=document.querySelector('.pdf-btn');
-
- if(typeof html2pdf==='undefined'){
-   alert('No se pudo cargar el generador PDF. Verifica tu conexión a Internet o utiliza Imprimir > Guardar como PDF.');
-   window.print();
-   return;
- }
-
- boton.disabled=true;
- boton.textContent='Preparando PDF...';
- elemento.classList.add('pdf-generating');
-
- try{
-   await html2pdf().set({
-     margin:[9,9,10,9],
-     filename:'Portafolio_Jonathan_Rengifo_Orozco.pdf',
-     image:{type:'jpeg',quality:0.97},
-     html2canvas:{
-       scale:2,
-       useCORS:true,
-       backgroundColor:'#ffffff',
-       logging:false
-     },
-     jsPDF:{
-       unit:'mm',
-       format:'a4',
-       orientation:'portrait'
-     },
-     pagebreak:{
-       mode:['css','legacy'],
-       avoid:['.card','.project','.timeline']
-     }
-   }).from(elemento).save();
-
- }catch(error){
-   console.error(error);
-   alert('No fue posible generar el PDF. Intenta nuevamente o utiliza la opción Imprimir del navegador.');
-
- }finally{
-   elemento.classList.remove('pdf-generating');
-   boton.disabled=false;
-   boton.textContent='↓ Descargar portafolio en PDF';
- }
+const elemento=document.getElementById('portfolio');
+const boton=document.querySelector('.pdf-btn');
+if(typeof html2pdf==='undefined'){
+alert('No se pudo cargar el generador PDF. Verifica tu conexión a Internet o utiliza Imprimir > Guardar como PDF.');
+window.print();
+return;
+}
+boton.disabled=true;
+boton.textContent='Preparando PDF...';
+elemento.classList.add('pdf-generating');
+try{
+await html2pdf().set({
+margin:[9,9,10,9],
+filename:'Portafolio_Jonathan_Rengifo_Orozco.pdf',
+image:{type:'jpeg',quality:0.97},
+html2canvas:{scale:2,useCORS:true,backgroundColor:'#ffffff',logging:false},
+jsPDF:{unit:'mm',format:'a4',orientation:'portrait'},
+pagebreak:{mode:['css','legacy'],avoid:['.card','.project','.timeline']}
+}).from(elemento).save();
+}catch(error){
+console.error(error);
+alert('No fue posible generar el PDF. Intenta nuevamente o utiliza la opción Imprimir del navegador.');
+}finally{
+elemento.classList.remove('pdf-generating');
+boton.disabled=false;
+boton.textContent='↓ Descargar portafolio en PDF';
+}
 }
 </script>
-
 </body>
 </html>
+
+gKQPDMy5V8WkueQTpb4fW4Xftx6bmDijy3xtN5K25BLqRHXufZd2jBtGpMeg008RlG8qo+50Su0Ll9xnSDwmDw/2/mA4mrbtObCx7k3PtkSSfxuEG7aI2w6dZ3l7KAGEsLGz/lWrihnOFinw+SoNko8VPidjRoQy3fq4fe9stiPJHbF1p5ANSdRgtGtoapG1dWHqQAwXm5ECPrq6kEMLyf9sA5LDxmQtZhEEHdOQxssViIOwOaNaQbd28knucAlhO+RoGCvf3K5h44uzJTOpPVIrvLTvtR7OuxO3UDfZDrgdpea/nRj94PEs73fVZI2QoqIN7ANQQkc9qq9bsgNc+fZvI1BQVQ6YGocDd2V1cE/yEYSFiohQg3o1UPwKYpM1B8ta8eycyDDLMtljcD7c6SLgeIKOHgzRCaUOe7Yhr3UFmZe3zg39UvRUj1lUAjJS/CP2RHJWxhZDkfCztpiraDDv8J46k0CbeI5iWtuS5GhXY4tuB1POnwuDTbs158Ys67zN/CRcKTIPDzi/MjS56r1/h9OOuJ/MCDcu8V//kKEmLtnL/7PXqc1T8GW+TD8IKVOvauii7igPIse5Kq5+kmx01ADJyxGQpyBd8MBSNHGeqem1kHoGRS2fpv6exO6glEBbRGus2kJCqAiC31xQzMH9opK8uKWOcvsxegEqLH+QfkZBmjgK4B2vUxpnY8q0SIgzfNVb3H6UrtnMMAYMvsMKVWfy+FqoYZmTNqRvtYK+ATJT2aZCdWhSmWtzNuPc0DSfd01ud+nb3iQQuFQm15dToDJmaF2PPtwDl6QquPo6SLLYNbLoDabOrtiqqdsTxfDJUNMH2IN5wl9DNKy3iXA/EvE1uOB+sS4Pgb9CAHntBbgSde1Iknd24lRFw1C9suRXs+4GkE2blQE1VlEQjCitlm/JvbTCn/IaxqJM06yBwtLhwl21j11ssk21JkCRsUtr/l33j8waK/oQPVzoxhl1Hq7JN/S1JZKds6UuGCEzSUy2FbjvrJM97pVfljX5X+AKgiAAP13KoBg06j9pBpI3b6aGKZTQDMCOSkEFItPPdOG0VjD4gEIJEXk5hXGFg1jtl5JiLQ68ym18CI4Clz7kXYjfUN3dZtkOuhp77LTtjSHTHjfAejEGZpWa0gkSw7PYbInzWvpo8gYq8PebNisoguBEYWUyGu9bLCF9YmOpNRLhmAAA="></div>
+</div>
+</section>
+<section class="section" id="acerca">
+<h2 class="section-title">Acerca de mí</h2>
+<div class="lead">
+<p>Actualmente estudio Gestión Tecnológica en el Instituto Tecnológico Metropolitano (ITM) y soy graduado en Gestión Administrativa. Cuento con experiencia en procesos administrativos y operativos, especialmente en seguimiento de producción, gestión de materiales y manejo de sistemas ERP.</p>
+<p>Me caracterizo por la responsabilidad, el compromiso y la orientación al logro. Entre mis fortalezas destaco la organización, el trabajo en equipo, la capacidad de adaptación y la disposición para encontrar soluciones a los desafíos cotidianos.</p>
+<p>Disfruto compartir tiempo con mi familia, ver fútbol, salir a caminar y aprender herramientas que contribuyan a mi desarrollo personal y profesional.</p>
+</div>
+</section>
+<section class="section alt">
+<h2 class="section-title">Áreas de experiencia</h2>
+<div class="grid">
+<article class="card"><div class="kicker">Operaciones</div><h3>Gestión de producción</h3><p>Seguimiento, control de procesos y coordinación de operaciones manufactureras.</p></article>
+<article class="card"><div class="kicker">Abastecimiento</div><h3>Gestión de materiales</h3><p>Control de inventarios, recepción de mercancías, traslados y gestión de pedidos.</p></article>
+<article class="card"><div class="kicker">Tecnología</div><h3>Sistemas ERP - SAP</h3><p>Experiencia y capacitación en los módulos PP (Planificación de Producción) y MM (Gestión de Materiales).</p></article>
+<article class="card"><div class="kicker">Cadena productiva</div><h3>Logística y manufactura</h3><p>Coordinación de operaciones externas, proveedores, talleres y procesos de maquila.</p></article>
+</div>
+</section>
+<section class="section" id="experiencia">
+<h2 class="section-title">Experiencia profesional</h2>
+<div class="lead" style="margin-bottom:25px">
+<p>Más de 20 años de experiencia en los sectores de confección, manufactura y logística, con participación en procesos de producción, maquila, gestión de proveedores, control de inventarios y coordinación de operaciones externas.</p>
+<p>Experiencia en mejoras operativas, acompañamiento a procesos de transformación tecnológica y optimización de cadenas productivas orientadas al cumplimiento de objetivos organizacionales.</p>
+</div>
+<div class="timeline">
+<h3>Analista de Producción</h3>
+<p><strong>Sectores:</strong> Confección, manufactura y logística.</p>
+<ul>
+<li>Seguimiento y control de producción.</li>
+<li>Gestión de materiales e inventarios.</li>
+<li>Coordinación de proveedores y talleres externos.</li>
+<li>Control de procesos de maquila.</li>
+<li>Optimización de operaciones productivas.</li>
+<li>Apoyo a procesos de transformación tecnológica.</li>
+</ul>
+</div>
+</section>
+<section class="section alt" id="formacion">
+<h2 class="section-title">Formación académica</h2>
+<div class="grid">
+<article class="card"><div class="kicker">2025 - Actualidad</div><h3>Gestión Tecnológica</h3><p>Instituto Tecnológico Metropolitano (ITM). Estudios profesionales en curso.</p></article>
+<article class="card"><div class="kicker">2015 - 2024</div><h3>Tecnología en Gestión Administrativa</h3><p>Instituto Tecnológico Metropolitano (ITM).</p></article>
+<article class="card"><div class="kicker">2014</div><h3>Técnico en Asistencia Administrativa</h3><p>Servicio Nacional de Aprendizaje (SENA).</p></article>
+</div>
+</section>
+<section class="section" id="certificados">
+<h2 class="section-title">Certificados y cursos</h2>
+<div class="grid">
+<article class="card"><h3>Administración de la Relación con los Clientes</h3><p>Curso realizado en el SENA.</p></article>
+<article class="card"><h3>Herramientas Avanzadas de Hoja de Cálculo</h3><p>Curso realizado en el SENA.</p></article>
+<article class="card"><h3>Pensamiento Empresarial - Módulo I</h3><p>Mentalidad Empresarial · SENA.</p></article>
+<article class="card"><h3>Pensamiento Empresarial - Módulo II</h3><p>Planeando la Empresa · SENA.</p></article>
+<article class="card"><h3>Pensamiento Empresarial - Módulo III</h3><p>Empresa y Gestión · SENA.</p></article>
+<article class="card"><h3>Contabilidad en las Organizaciones</h3><p>Curso realizado en el SENA.</p></article>
+</div>
+</section>
+<section class="section alt" id="sap">
+<h2 class="section-title">Capacitaciones en sistema SAP</h2>
+<div class="grid">
+<article class="card"><h3>SAP PP · Production Planning</h3><p>Capacitación en el módulo de planificación de producción, con enfoque en procesos de manufactura.</p></article>
+<article class="card"><h3>SAP MM · Materials Management</h3><p>Capacitación en compra de servicios, registro de información, gestión de pedidos de compra, recepción de mercancía y traslados en dos pasos.</p></article>
+</div>
+</section>
+<section class="section" id="proyectos">
+<h2 class="section-title">Proyecto destacado</h2>
+<div class="project">
+<div class="kicker">Transformación operativa y tecnológica</div>
+<h3>Transición tecnológica SAP y fortalecimiento del proyecto de maquila - Marketing Personal</h3>
+<p>Ingresé a Marketing Personal durante un periodo de transformación operativa y participé en el proceso de transición al sistema SAP. Contribuí en la adaptación de procesos, el seguimiento de la operación y el acompañamiento a los equipos involucrados.</p>
+<p>Adicionalmente, apoyé la consolidación y el crecimiento del proyecto de maquila, fortaleciendo el control de la producción, la coordinación con talleres externos y el cumplimiento de los objetivos operativos.</p>
+</div>
+</section>
+<section class="section alt">
+<h2 class="section-title">Conéctate conmigo</h2>
+<div class="social">
+<a href="https://www.linkedin.com/in/jonathan-rengifo-orozco-12177088/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<a href="https://www.instagram.com/jrengifoo/" target="_blank" rel="noopener noreferrer">Instagram</a>
+<a href="https://www.facebook.com/jonathan.rengifoorozco?locale=es_LA" target="_blank" rel="noopener noreferrer">Facebook</a>
+</div>
+</section>
+<section class="section contact" id="contacto">
+<h2 class="section-title">Contacto</h2>
+<p><strong>Nombre:</strong> Jonathan Rengifo Orozco</p>
+<p><strong>Correo electrónico:</strong> <a href="mailto:jonathan.rengifo.26@gmail.com">jonathan.rengifo.26@gmail.com</a></p>
+<p><strong>Institución:</strong> Instituto Tecnológico Metropolitano (ITM)</p>
+<p><strong>Perfil:</strong> Gestión Tecnológica y Administrativa</p>
+<p class="no-pdf" style="margin-top:18px"><a class="primary-btn" href="mailto:jonathan.rengifo.26@gmail.com">Enviar un correo</a></p>
+</section>
+<footer>
+<p>© 2026 Jonathan Rengifo Orozco · Portafolio Profesional</p>
+<p>Gestión Tecnológica · Administración · Producción · Innovación · Manufactura</p>
+</footer>
+</main>
+<script>
+async function descargarPDF(){
+const elemento=document.getElementById('portfolio');
+const boton=document.querySelector('.pdf-btn');
+if(typeof html2pdf==='undefined'){
+alert('No se pudo cargar el generador PDF. Verifica tu conexión a Internet o utiliza Imprimir > Guardar como PDF.');
+window.print();
+return;
+}
+boton.disabled=true;
+boton.textContent='Preparando PDF...';
+elemento.classList.add('pdf-generating');
+try{
+await html2pdf().set({
+margin:[9,9,10,9],
+filename:'Portafolio_Jonathan_Rengifo_Orozco.pdf',
+image:{type:'jpeg',quality:0.97},
+html2canvas:{scale:2,useCORS:true,backgroundColor:'#ffffff',logging:false},
+jsPDF:{unit:'mm',format:'a4',orientation:'portrait'},
+pagebreak:{mode:['css','legacy'],avoid:['.card','.project','.timeline']}
+}).from(elemento).save();
+}catch(error){
+console.error(error);
+alert('No fue posible generar el PDF. Intenta nuevamente o utiliza la opción Imprimir del navegador.');
+}finally{
+elemento.classList.remove('pdf-generating');
+boton.disabled=false;
+boton.textContent='↓ Descargar portafolio en PDF';
+}
+}
+</script>
+</body>
+</html>
+
