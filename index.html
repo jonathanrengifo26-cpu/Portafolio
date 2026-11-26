@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -93,26 +94,17 @@ a{text-decoration:none}
 </style>
 </head>
 <body>
-
 <header class="site-header no-pdf">
 <div class="brand">JONATHAN <span>RENGIFO OROZCO</span></div>
 <nav>
-<a href="#inicio">Inicio</a>
-<a href="#acerca">Perfil</a>
-<a href="#experiencia">Experiencia</a>
-<a href="#formacion">Formación</a>
-<a href="#sap">SAP</a>
-<a href="#proyectos">Proyecto</a>
-<a href="#contacto">Contacto</a>
+<a href="#inicio">Inicio</a><a href="#acerca">Perfil</a><a href="#experiencia">Experiencia</a>
+<a href="#formacion">Formación</a><a href="#sap">SAP</a><a href="#proyectos">Proyecto</a><a href="#contacto">Contacto</a>
 </nav>
 </header>
-
 <div class="toolbar no-pdf">
 <button class="pdf-btn" onclick="descargarPDF()">↓ Descargar portafolio en PDF</button>
 </div>
-
 <main id="portfolio">
-
 <section class="hero" id="inicio">
 <div class="hero-inner">
 <div>
@@ -120,22 +112,11 @@ a{text-decoration:none}
 <h1>Jonathan<br><span>Rengifo Orozco</span></h1>
 <div class="role">Gestión Tecnológica · Gestión Administrativa</div>
 <p class="hero-copy">Tecnólogo en Gestión Administrativa y estudiante de Gestión Tecnológica en el ITM. Experiencia en producción, manufactura, logística, gestión de materiales y sistemas ERP.</p>
-<div class="hero-actions no-pdf">
-<a class="primary-btn" href="#contacto">Hablemos de oportunidades</a>
+<div class="hero-actions no-pdf"><a class="primary-btn" href="#contacto">Hablemos de oportunidades</a></div>
 </div>
-</div>
-
-<!-- FOTOGRAFIA: DEBE ESTAR EN LA MISMA CARPETA QUE index.html -->
-<div class="photo">
-<img src="foto-jonathan.jpg"
-alt="Fotografía profesional de Jonathan Rengifo Orozco"
-loading="eager"
-decoding="async">
-</div>
-
+<div class="photo"><img id="fotoJonathan" alt="Fotografía profesional de Jonathan Rengifo Orozco" loading="eager" decoding="async" src=""></div>
 </div>
 </section>
-
 <section class="section" id="acerca">
 <h2 class="section-title">Acerca de mí</h2>
 <div class="lead">
@@ -144,33 +125,15 @@ decoding="async">
 <p>Disfruto compartir tiempo con mi familia, ver fútbol, salir a caminar y aprender herramientas que contribuyan a mi desarrollo personal y profesional.</p>
 </div>
 </section>
-
 <section class="section alt">
 <h2 class="section-title">Áreas de experiencia</h2>
 <div class="grid">
-<article class="card">
-<div class="kicker">Operaciones</div>
-<h3>Gestión de producción</h3>
-<p>Seguimiento, control de procesos y coordinación de operaciones manufactureras.</p>
-</article>
-<article class="card">
-<div class="kicker">Abastecimiento</div>
-<h3>Gestión de materiales</h3>
-<p>Control de inventarios, recepción de mercancías, traslados y gestión de pedidos.</p>
-</article>
-<article class="card">
-<div class="kicker">Tecnología</div>
-<h3>Sistemas ERP - SAP</h3>
-<p>Experiencia y capacitación en los módulos PP (Planificación de Producción) y MM (Gestión de Materiales).</p>
-</article>
-<article class="card">
-<div class="kicker">Cadena productiva</div>
-<h3>Logística y manufactura</h3>
-<p>Coordinación de operaciones externas, proveedores, talleres y procesos de maquila.</p>
-</article>
+<article class="card"><div class="kicker">Operaciones</div><h3>Gestión de producción</h3><p>Seguimiento, control de procesos y coordinación de operaciones manufactureras.</p></article>
+<article class="card"><div class="kicker">Abastecimiento</div><h3>Gestión de materiales</h3><p>Control de inventarios, recepción de mercancías, traslados y gestión de pedidos.</p></article>
+<article class="card"><div class="kicker">Tecnología</div><h3>Sistemas ERP - SAP</h3><p>Experiencia y capacitación en los módulos PP (Planificación de Producción) y MM (Gestión de Materiales).</p></article>
+<article class="card"><div class="kicker">Cadena productiva</div><h3>Logística y manufactura</h3><p>Coordinación de operaciones externas, proveedores, talleres y procesos de maquila.</p></article>
 </div>
 </section>
-
 <section class="section" id="experiencia">
 <h2 class="section-title">Experiencia profesional</h2>
 <div class="lead" style="margin-bottom:25px">
@@ -190,72 +153,32 @@ decoding="async">
 </ul>
 </div>
 </section>
-
 <section class="section alt" id="formacion">
 <h2 class="section-title">Formación académica</h2>
 <div class="grid">
-<article class="card">
-<div class="kicker">2025 - Actualidad</div>
-<h3>Gestión Tecnológica</h3>
-<p>Instituto Tecnológico Metropolitano (ITM). Estudios profesionales en curso.</p>
-</article>
-<article class="card">
-<div class="kicker">2015 - 2024</div>
-<h3>Tecnología en Gestión Administrativa</h3>
-<p>Instituto Tecnológico Metropolitano (ITM).</p>
-</article>
-<article class="card">
-<div class="kicker">2014</div>
-<h3>Técnico en Asistencia Administrativa</h3>
-<p>Servicio Nacional de Aprendizaje (SENA).</p>
-</article>
+<article class="card"><div class="kicker">2025 - Actualidad</div><h3>Gestión Tecnológica</h3><p>Instituto Tecnológico Metropolitano (ITM). Estudios profesionales en curso.</p></article>
+<article class="card"><div class="kicker">2015 - 2024</div><h3>Tecnología en Gestión Administrativa</h3><p>Instituto Tecnológico Metropolitano (ITM).</p></article>
+<article class="card"><div class="kicker">2014</div><h3>Técnico en Asistencia Administrativa</h3><p>Servicio Nacional de Aprendizaje (SENA).</p></article>
 </div>
 </section>
-
 <section class="section" id="certificados">
 <h2 class="section-title">Certificados y cursos</h2>
 <div class="grid">
-<article class="card">
-<h3>Administración de la Relación con los Clientes</h3>
-<p>Curso realizado en el SENA.</p>
-</article>
-<article class="card">
-<h3>Herramientas Avanzadas de Hoja de Cálculo</h3>
-<p>Curso realizado en el SENA.</p>
-</article>
-<article class="card">
-<h3>Pensamiento Empresarial - Módulo I</h3>
-<p>Mentalidad Empresarial · SENA.</p>
-</article>
-<article class="card">
-<h3>Pensamiento Empresarial - Módulo II</h3>
-<p>Planeando la Empresa · SENA.</p>
-</article>
-<article class="card">
-<h3>Pensamiento Empresarial - Módulo III</h3>
-<p>Empresa y Gestión · SENA.</p>
-</article>
-<article class="card">
-<h3>Contabilidad en las Organizaciones</h3>
-<p>Curso realizado en el SENA.</p>
-</article>
+<article class="card"><h3>Administración de la Relación con los Clientes</h3><p>Curso realizado en el SENA.</p></article>
+<article class="card"><h3>Herramientas Avanzadas de Hoja de Cálculo</h3><p>Curso realizado en el SENA.</p></article>
+<article class="card"><h3>Pensamiento Empresarial - Módulo I</h3><p>Mentalidad Empresarial · SENA.</p></article>
+<article class="card"><h3>Pensamiento Empresarial - Módulo II</h3><p>Planeando la Empresa · SENA.</p></article>
+<article class="card"><h3>Pensamiento Empresarial - Módulo III</h3><p>Empresa y Gestión · SENA.</p></article>
+<article class="card"><h3>Contabilidad en las Organizaciones</h3><p>Curso realizado en el SENA.</p></article>
 </div>
 </section>
-
 <section class="section alt" id="sap">
 <h2 class="section-title">Capacitaciones en sistema SAP</h2>
 <div class="grid">
-<article class="card">
-<h3>SAP PP · Production Planning</h3>
-<p>Capacitación en el módulo de planificación de producción, con enfoque en procesos de manufactura.</p>
-</article>
-<article class="card">
-<h3>SAP MM · Materials Management</h3>
-<p>Capacitación en compra de servicios, registro de información, gestión de pedidos de compra, recepción de mercancía y traslados en dos pasos.</p>
-</article>
+<article class="card"><h3>SAP PP · Production Planning</h3><p>Capacitación en el módulo de planificación de producción, con enfoque en procesos de manufactura.</p></article>
+<article class="card"><h3>SAP MM · Materials Management</h3><p>Capacitación en compra de servicios, registro de información, gestión de pedidos de compra, recepción de mercancía y traslados en dos pasos.</p></article>
 </div>
 </section>
-
 <section class="section" id="proyectos">
 <h2 class="section-title">Proyecto destacado</h2>
 <div class="project">
@@ -265,50 +188,38 @@ decoding="async">
 <p>Adicionalmente, apoyé la consolidación y el crecimiento del proyecto de maquila, fortaleciendo el control de la producción, la coordinación con talleres externos y el cumplimiento de los objetivos operativos.</p>
 </div>
 </section>
-
 <section class="section alt">
 <h2 class="section-title">Conéctate conmigo</h2>
-<div class="social">
-<a href="https://www.linkedin.com/in/jonathan-rengifo-orozco-12177088/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<div class="social"><a href="https://www.linkedin.com/in/jonathan-rengifo-orozco-12177088/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
 <a href="https://www.instagram.com/jrengifoo/" target="_blank" rel="noopener noreferrer">Instagram</a>
 <a href="https://www.facebook.com/jonathan.rengifoorozco?locale=es_LA" target="_blank" rel="noopener noreferrer">Facebook</a>
 </div>
 </section>
-
 <section class="section contact" id="contacto">
 <h2 class="section-title">Contacto</h2>
 <p><strong>Nombre:</strong> Jonathan Rengifo Orozco</p>
-<p><strong>Correo electrónico:</strong>
-<a href="mailto:jonathanrengifo.26@gmail.com">jonathanrengifo.26@gmail.com</a></p>
+<p><strong>Correo electrónico:</strong> <a href="mailto:jonathanrengifo.26@gmail.com">jonathanrengifo.26@gmail.com</a></p>
 <p><strong>Institución:</strong> Instituto Tecnológico Metropolitano (ITM)</p>
 <p><strong>Perfil:</strong> Gestión Tecnológica y Administrativa</p>
-<p class="no-pdf" style="margin-top:18px">
-<a class="primary-btn" href="mailto:jonathanrengifo.26@gmail.com">Enviar un correo</a>
-</p>
+<p class="no-pdf" style="margin-top:18px"><a class="primary-btn" href="mailto:jonathanrengifo.26@gmail.com">Enviar un correo</a></p>
 </section>
-
 <footer>
 <p>© 2026 Jonathan Rengifo Orozco · Portafolio Profesional</p>
 <p>Gestión Tecnológica · Administración · Producción · Innovación · Manufactura</p>
 </footer>
-
 </main>
-
 <script>
 async function descargarPDF(){
 const elemento=document.getElementById('portfolio');
 const boton=document.querySelector('.pdf-btn');
-
 if(typeof html2pdf==='undefined'){
 alert('No se pudo cargar el generador PDF. Verifica tu conexión a Internet o utiliza Imprimir > Guardar como PDF.');
 window.print();
 return;
 }
-
 boton.disabled=true;
 boton.textContent='Preparando PDF...';
 elemento.classList.add('pdf-generating');
-
 try{
 await html2pdf().set({
 margin:[9,9,10,9],
@@ -318,11 +229,9 @@ html2canvas:{scale:2,useCORS:true,backgroundColor:'#ffffff',logging:false},
 jsPDF:{unit:'mm',format:'a4',orientation:'portrait'},
 pagebreak:{mode:['css','legacy'],avoid:['.card','.project','.timeline']}
 }).from(elemento).save();
-
 }catch(error){
 console.error(error);
 alert('No fue posible generar el PDF. Intenta nuevamente o utiliza la opción Imprimir del navegador.');
-
 }finally{
 elemento.classList.remove('pdf-generating');
 boton.disabled=false;
@@ -331,7 +240,225 @@ boton.textContent='↓ Descargar portafolio en PDF';
 }
 </script>
 
+<script>
+// Fotografía integrada en el HTML: no requiere archivos externos.
+const fotoJonathanBase64 = [
+"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"
+].join("");
+document.getElementById("fotoJonathan").src = "data:image/webp;base64," + fotoJonathanBase64;
+</script>
 </body>
 </html>
-<img src="data:image/webp;base64,..." 
-     alt="Fotografía profesional de Jonathan Rengifo Orozco">
